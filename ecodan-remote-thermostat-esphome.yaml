@@ -6,8 +6,13 @@ esphome:
   name: ${name}
   friendly_name: ${friendlyName}
 
+# enable ota update via http request
+http_request:
+  buffer_size_tx: 20248
+
 ota:
   - platform: esphome
+  - platform: http_request
 #  password: !secret heatpump_ota_password
 
 api:
@@ -47,6 +52,7 @@ packages:
     refresh: always
     files: [ 
             confs/esp32s3.yaml,
+            #confs/esp32s3-led.yaml,    # atom s3 status leds
             ## enable label language file
             confs/ecodan-labels-en.yaml,
             #confs/ecodan-labels-nl.yaml,
