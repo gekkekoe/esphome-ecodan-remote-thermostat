@@ -25,16 +25,13 @@ jobs:
 
       - name: prepare build yaml
         run: |
-          sed "s/#confs\\/esp32s3-led.yaml/confs\/esp32s3-led.yaml/g" ecodan-remote-thermostat-esphome.yaml > build.yaml
+          sed "s/#confs\\/esp32s3-led.yaml/confs\/esp32s3-led.yaml/g; s/#thermostat-room-1/thermostat-room-1/g;" ecodan-remote-thermostat-esphome.yaml > build.yaml
           sed "s/manifest-room-1/$MANIFEST/g; s/VERSION/$PREFIX/g" pipeline/ota.yaml > ota.yaml
-          cp pipeline/${{ matrix.room }}.yaml room.yaml
           echo "<<: !include ota.yaml" >> build.yaml
-          echo "<<: !include room.yaml" >> build.yaml
 
       - name: Generated yaml
         run: |
           cat secrets.yaml
-          cat room.yaml
           cat ota.yaml
           cat build.yaml
 

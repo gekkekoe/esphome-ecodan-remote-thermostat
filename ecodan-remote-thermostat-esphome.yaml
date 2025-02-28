@@ -2,10 +2,6 @@ substitutions:
   name: ecodan-thermostat
   friendlyName: Ecodan thermostat
 
-esphome:
-  name: ${name}
-  friendly_name: ${friendlyName}
-
 # enable ota update via http request
 http_request:
   buffer_size_tx: 20248
@@ -45,7 +41,7 @@ external_components:
 packages:
 # up to 8 thermostats can be defined. 0-7.
   thermostat-room-0: !include { file: confs/thermostat-room.yaml, vars: { room_identifier: 0, room_name: "Room 1" } }
-#  thermostat-room-1: !include { file: confs/thermostat-room.yaml, vars: { room_identifier: 1, room_name: "Room 2" } }
+  #thermostat-room-1: !include { file: confs/thermostat-room.yaml, vars: { room_identifier: 1, room_name: "Room 2" } }
   remote_package:
     url: https://github.com/gekkekoe/esphome-ecodan-remote-thermostat
     ref: main

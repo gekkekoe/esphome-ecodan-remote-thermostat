@@ -1,3 +1,0 @@
-packages:
-# up to 8 thermostats can be defined. 0-7.
-  thermostat-room-1: !include { file: confs/thermostat-room.yaml, vars: { room_identifier: 1, room_name: "Room 2" } }
