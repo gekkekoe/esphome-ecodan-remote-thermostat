@@ -16,3 +16,5 @@ update:
   - platform: http_request
     name: Firmware Update
     source: https://github.com/gekkekoe/esphome-ecodan-remote-thermostat/releases/latest/download/manifest-room-1.json
+
+improv_serial:
