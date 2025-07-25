@@ -28,7 +28,9 @@ jobs:
 
       - name: prepare build yaml
         run: |
-          sed "s/#confs\\/esp32s3-led.yaml/confs\/esp32s3-led.yaml/g; s/#thermostat-room-1/thermostat-room-1/g;" ecodan-remote-thermostat-esphome.yaml > build.yaml
+          sed "s/#confs\\/esp32s3-led.yaml/confs\/esp32s3-led.yaml/g; \
+            s/confs\\/wifi.yaml/confs\/wifi-ota.yaml/g; \
+            s/#thermostat-room-1/thermostat-room-1/g;" ecodan-remote-thermostat-esphome.yaml; > build.yaml
           sed "s/manifest-room-1/$MANIFEST/g; s/VERSION/$PREFIX/g" pipeline/ota.yaml > ota.yaml
           echo "<<: !include ota.yaml" >> build.yaml
 

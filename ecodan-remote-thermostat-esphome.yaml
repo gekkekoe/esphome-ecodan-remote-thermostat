@@ -9,6 +9,7 @@ http_request:
 ota:
   - platform: esphome
   - platform: http_request
+  - platform: web_server
 #  password: !secret heatpump_ota_password
 
 api:
@@ -55,7 +56,7 @@ packages:
             #confs/ecodan-labels-it.yaml,
             #confs/ecodan-labels-fr.yaml,
             #confs/debug.yaml,
-            confs/wifi.yaml,
+            confs/wifi.yaml
            ]
 
 # enable logger

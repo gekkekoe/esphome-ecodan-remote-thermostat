@@ -1,6 +1,7 @@
 .vscode
 .pio
 .esphome
+.python-version
 venv
 Firmware.bin
 sdkconfig.esp32dev
