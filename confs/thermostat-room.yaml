@@ -7,6 +7,19 @@ api:
         - lambda: |-
             id(ecodan_instance).set_room_thermostat_current_temp(temperature, ${room_identifier});
 
+number:
+  - platform: template
+    id: room_${room_identifier}
+    min_value: -50
+    max_value: 100
+    step: 0.1
+    internal: true
+    lambda: |-
+        auto& status = id(ecodan_instance).get_status();
+        return status.CurrentRoomTemperatures[${room_identifier}] != 0xff ? status.CurrentRoomTemperatures[${room_identifier}] : 0.0f;
+    set_action:
+      - lambda: |-
+          id(ecodan_instance).set_room_thermostat_current_temp(x, ${room_identifier});
 
 climate:
   - platform: ecodan

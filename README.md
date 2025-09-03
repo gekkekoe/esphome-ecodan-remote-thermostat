@@ -104,6 +104,22 @@ esphome upload --device ip_address ecodan-remote-thermostat-esphome.yaml
 # Installation
 Power down your unit (use circuit breaker!) and plug the flashed unit into the CNRF port. It's near the regular CN105 port. Turn `SW1-8` to on to enable the remote thermostat. Restore the power and select the remote thermostat as thermostat. If you are using `IN1` port, you probably need to disable it via `SW2-1`
 
+# Using direct REST API
+The esphome component will expose a REST API for the thermostats. You can use GET/POST to access/modify the current temperature. The entities will be named `room_0`, `room_1` and so on.
+
+### Get data 
+```bash
+curl -X GET GET "http://<esp_id>/number/room_0"
+# returns
+{"id":"number-room_0","value":"21.5","state":"21.5"}
+```
+
+### Post data
+```bash
+curl -X POST "http://<esp_ip>/number/room_1/set?value=22.5" -d ""
+```
+
+# Using Home Assistant
 The esphome component will be auto detected in Home Assistant. In Home Assistant you need to enable actions. See https://esphome.io/components/api.html#actions
 Perform the following steps:
 
