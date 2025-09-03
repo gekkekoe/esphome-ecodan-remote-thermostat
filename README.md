@@ -109,7 +109,7 @@ The esphome component will expose a REST API for the thermostats. You can use GE
 
 ### Get data 
 ```bash
-curl -X GET GET "http://<esp_id>/number/room_0"
+curl -X GET "http://<esp_id>/number/room_0"
 # returns
 {"id":"number-room_0","value":"21.5","state":"21.5"}
 ```
