@@ -116,7 +116,7 @@ curl -X GET GET "http://<esp_id>/number/room_0"
 
 ### Post data
 ```bash
-curl -X POST "http://<esp_ip>/number/room_1/set?value=22.5" -d ""
+curl -X POST "http://<esp_ip>/number/room_0/set?value=22.5" -d ""
 ```
 
 # Using Home Assistant
