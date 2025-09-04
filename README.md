@@ -10,7 +10,7 @@ If you want to contribute with a translation: copy the file `ecodan-labels-en.ya
 * [Install from prebuilt binaries](https://github.com/gekkekoe/esphome-ecodan-remote-thermostat/blob/main/docs/install-from-bin.md)
 * [Build from source](https://github.com/gekkekoe/esphome-ecodan-remote-thermostat/blob/main/docs/build-from-source.md)
 * [Supply temperature using REST API](https://github.com/gekkekoe/esphome-ecodan-remote-thermostat/blob/main/docs/update-from-rest.md)
-* [Supply temperature using Home Assistant](https://github.com/gekkekoe/esphome-ecodan-remote-thermostat/blob/main/docs/update-from-rest.md)
+* [Supply temperature using Home Assistant](https://github.com/gekkekoe/esphome-ecodan-remote-thermostat/blob/main/docs/update-from-ha.md)
 
 # Installation
 Power down your unit (use circuit breaker!) and plug the flashed unit into the CNRF port. It's near the regular CN105 port. Turn `SW1-8` to on to enable the remote thermostat. Restore the power and select the remote thermostat as thermostat. If you are using `IN1` port, you probably need to disable it via `SW2-1`. Use the REST API or Home assistant to supply room temperatures.
