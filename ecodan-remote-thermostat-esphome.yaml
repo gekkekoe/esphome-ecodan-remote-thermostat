@@ -47,7 +47,8 @@ packages:
     url: https://github.com/gekkekoe/esphome-ecodan-remote-thermostat
     ref: main
     refresh: always
-    files: [ 
+    files: [
+            confs/base.yaml,
             confs/esp32s3.yaml,
             #confs/esp32s3-led.yaml,    # atom s3 status leds
             ## enable label language file
@@ -59,20 +60,19 @@ packages:
             confs/wifi.yaml
            ]
 
-# enable logger
 logger:
   baud_rate: 115200
-  logs:
-    esp32.preferences: DEBUG
-    sensor: DEBUG
-    text_sensor: DEBUG
-    binary_sensor: DEBUG
-    switch: DEBUG
-    button: DEBUG
-    number: DEBUG
-    climate: DEBUG
-    component: DEBUG
-    ecodan.component: DEBUG
+  # logs:
+  #   esp32.preferences: DEBUG
+  #   sensor: DEBUG
+  #   text_sensor: DEBUG
+  #   binary_sensor: DEBUG
+  #   switch: DEBUG
+  #   button: DEBUG
+  #   number: DEBUG
+  #   climate: DEBUG
+  #   component: DEBUG
+  #   ecodan.component: DEBUG
 
 # Enable Web server.
 web_server:
