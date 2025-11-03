@@ -13,6 +13,12 @@ If you want to contribute with a translation: copy the file `ecodan-labels-en.ya
 * [Supply temperature using Home Assistant](https://github.com/gekkekoe/esphome-ecodan-remote-thermostat/blob/main/docs/update-from-ha.md)
 
 # Installation
-Power down your unit (use circuit breaker!) and plug the flashed unit into the CNRF port. It's near the regular CN105 port. Turn `SW1-8` to on to enable the remote thermostat. Restore the power and select the remote thermostat as thermostat. If you are using `IN1` port, you probably need to disable it via `SW2-1`. Use the REST API or Home assistant to supply room temperatures.
+Power down your unit (use circuit breaker!) and plug the flashed unit into the CNRF port. It's near the regular CN105 port. 
+
+- Turn `SW1-8` to on to enable the remote thermostat. Restore the power and select the remote thermostat as thermostat. If you are using `IN1` port, you probably need to disable it via `SW2-1`. 
+- Map the wireless thermostat to a room via: `initial settings` > `room sensor settings` > `zone 1 and/or 2` > `sensor settings` > select the configured RCx here.
+- Assign RC to a zone via: `initial settings` > `room sensor settings` > `Room RC zone select` > Set your RCx to the correct zone
+
+Use the REST API or Home assistant to supply room temperatures.
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/gekkekoe)
