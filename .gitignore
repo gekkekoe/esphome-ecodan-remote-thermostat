@@ -2,6 +2,7 @@
 .pio
 .esphome
 .python-version
+build.yaml
 venv
 Firmware.bin
 sdkconfig.esp32dev
