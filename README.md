@@ -1,6 +1,9 @@
 # ESPHome Ecodan Remote Thermostat
 Mimics a remote thermostat over CNRF. You can use any thermostat/temp sensor as a remote thermostat. This projects supports up to 8 remote thermostats. Use any temperature sensor or thermostat as data source for the Ecodan heatpump. The required hardware is the same as used by https://github.com/gekkekoe/esphome-ecodan-hp
 
+# A better alternative
+With the introduced Asgard PCB, there's another alternative to CNRF (high resolution supported). [more info](https://github.com/gekkekoe/esphome-ecodan-hp/discussions/261) 
+
 # available languages
 English (default), Dutch, Italian, French, Spanish. Select the language in `ecodan-remote-thermostat-esphome.yaml` file. 
 If you want to contribute with a translation: copy the file `ecodan-labels-en.yaml` to `ecodan-labels-xx.yaml`, fill in all the labels and submit a pull request.
