@@ -3,6 +3,7 @@
 #include <functional>
 #include <string>
 #include <chrono>
+#include <queue>
 
 #include "esphome.h"
 #include "esphome/core/component.h"
